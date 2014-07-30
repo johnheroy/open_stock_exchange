@@ -25,6 +25,10 @@ var lastTrade; // update to last trade
 // sockets
 io.on('connection', function(socket){
   console.log('a user connected');
+  io.emit('new order book', {
+    buys: buyOrders,
+    sells: sellOrders
+  });
   socket.on('disconnect', function(){
     console.log('user disconnected');
   });
