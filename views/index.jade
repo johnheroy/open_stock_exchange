@@ -13,20 +13,40 @@ html(lang='en')
         div(class='col-xs-6')
           div(class='title') Stock Exchange Demo
           div(class='stats')
-            p Last trade: 
-              span(class='last-trade')
-            p Current bid/ask: 
-              span(class='current-bid-ask')
-            p 
+            span(class='stats-label') Last trade: 
+            span(class='last-trade stats-data')
+            span(class='stats-label') Current bid/ask: 
+            span(class='current-bid-ask stats-data')
+            span(class='stats-label') 
               | Your 
               a(href='#', class='latency-popover', rel='popover') latency* 
-              | is 
-              span(class='latency')
+              | is:
+            span(class='latency stats-data')
           div(class='order-entry')
             h3 Place your order
             input(class='form-control shares-entry', placeholder='# shares')
             input(class='form-control limit-entry',  placeholder='limit price')
             button(class='btn btn-success') Buy
             button(class='btn btn-danger') Sell
-        div(class='col-xs-6')
-          p blah
+        div(class='col-xs-4')
+          div(class='order-line sell-10')
+          div(class='order-line sell-9')
+          div(class='order-line sell-8')
+          div(class='order-line sell-7')
+          div(class='order-line sell-6')
+          div(class='order-line sell-5')
+          div(class='order-line sell-4')
+          div(class='order-line sell-3')
+          div(class='order-line sell-2')
+          div(class='order-line sell-1')
+          div(class='order-line blank')
+          div(class='order-line buy-1')
+          div(class='order-line buy-2')
+          div(class='order-line buy-3')
+          div(class='order-line buy-4')
+          div(class='order-line buy-5')
+          div(class='order-line buy-6')
+          div(class='order-line buy-7')
+          div(class='order-line buy-8')
+          div(class='order-line buy-9')
+          div(class='order-line buy-10')

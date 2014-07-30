@@ -11,16 +11,21 @@
   text-align: center;
   font-size: 24px;
   font-weight: bold;
-  display: table-cell;
-  vertical-align: middle;
+  display: block;
+  padding-top: 23px;
+  margin-left: 73px;
 }
 
-h1, h2, h3, h4, h5, p {
+h1, h2, h3, h4, h5, p, .stats-label {
   font-family: Geneva, sans-serif;
 }
 
-p {
+p, .stats-label, .stats-data {
   font-size: 16px;
+}
+
+.stats-data {
+  font-weight: bold;
 }
 
 .shares-entry, .limit-entry {
@@ -34,13 +39,119 @@ p {
 }
 
 .stats {
-  margin-top: 50px;
+  margin-top: 100px;
 }
 
 .order-entry {
-  margin-top: 50px;
+  margin-top: 96px;
 }
 
 .popover-content {
   font-size: 12px;
+}
+
+.stats-label {
+  width: 150px;
+  text-align: right;
+  display: inline-block;
+  padding-right: 10px;
+  margin-top: 7px;
+  margin-bottom: 7px;
+}
+
+.stats-data {
+  display: inline-block;
+  width: 200px;
+  text-align: left;
+  padding-left: 0px;
+}
+
+/* orders */
+
+.order-line {
+  height: 25px;
+}
+
+.blank {
+  background-color: #c0d9d9;
+}
+
+.sell-1 {
+  background-color: rgba(92,184,92,1);
+}
+
+.sell-2 {
+  background-color: rgba(92,184,92,.9);
+}
+
+.sell-3 {
+  background-color: rgba(92,184,92,.8);
+}
+
+.sell-4 {
+  background-color: rgba(92,184,92,.7);
+}
+
+.sell-5 {
+  background-color: rgba(92,184,92,.6);
+}
+
+.sell-6 {
+  background-color: rgba(92,184,92,.5);
+}
+
+.sell-7 {
+  background-color: rgba(92,184,92,.4);
+}
+
+.sell-8 {
+  background-color: rgba(92,184,92,.3);
+}
+
+.sell-9 {
+  background-color: rgba(92,184,92,.2);
+}
+
+.sell-10 {
+  background-color: rgba(92,184,92,.1);
+}
+
+.buy-1 {
+  background-color: rgba(217,83,79,1);
+}
+
+.buy-2 {
+  background-color: rgba(217,83,79,.9);
+}
+
+.buy-3 {
+  background-color: rgba(217,83,79,.8);
+}
+
+.buy-4 {
+  background-color: rgba(217,83,79,.7);
+}
+
+.buy-5 {
+  background-color: rgba(217,83,79,.6);
+}
+
+.buy-6 {
+  background-color: rgba(217,83,79,.5);
+}
+
+.buy-7 {
+  background-color: rgba(217,83,79,.4);
+}
+
+.buy-8 {
+  background-color: rgba(217,83,79,.3);
+}
+
+.buy-9 {
+  background-color: rgba(217,83,79,.2);
+}
+
+.buy-10 {
+  background-color: rgba(217,83,79,.1);
 }
