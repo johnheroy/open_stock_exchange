@@ -1,0 +1,27 @@
+{
+  "name": "stock_exchange",
+  "version": "0.0.0",
+  "description": "stock exchange simulator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/johnheroy/stock_exchange.git"
+  },
+  "keywords": [
+    "stocks",
+    "equities",
+    "bitcoin"
+  ],
+  "author": "John Heroy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/johnheroy/stock_exchange/issues"
+  },
+  "homepage": "https://github.com/johnheroy/stock_exchange",
+  "dependencies": {
+    "express": "^4.7.2"
+  }
+}
