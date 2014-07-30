@@ -2,10 +2,31 @@ doctype html
 html(lang='en')
   head
     title Stock Exchange
+    link(href='./stylesheets/bootstrap.min.css', rel='stylesheet')
     link(href='./stylesheets/welcome.css', rel='stylesheet')
     script(src='./javascripts/jquery-2.1.1.min.js')
+    script(src='./javascripts/bootstrap.min.js')
     script(src='./javascripts/welcome.js')
   body
-    div(class='title') Stock Exchange Demo
-    p Your latency is 
-      span(class='latency')
+    div(class='container')
+      div(class='row')
+        div(class='col-xs-6')
+          div(class='title') Stock Exchange Demo
+          div(class='stats')
+            p Last trade: 
+              span(class='last-trade')
+            p Current bid/ask: 
+              span(class='current-bid-ask')
+            p 
+              | Your 
+              a(href='#', class='latency-popover', rel='popover') latency* 
+              | is 
+              span(class='latency')
+          div(class='order-entry')
+            h3 Place your order
+            input(class='form-control shares-entry', placeholder='# shares')
+            input(class='form-control limit-entry',  placeholder='limit price')
+            button(class='btn btn-success') Buy
+            button(class='btn btn-danger') Sell
+        div(class='col-xs-6')
+          p blah

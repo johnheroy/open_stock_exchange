@@ -1,12 +1,46 @@
+.container {
+  width: 800px;
+}
+
 .title {
   height: 150px;
   width: 150px;
   border-radius: 75px;
   color: white;
-  background-color: blue;
+  background-color: #0F4D92;
   text-align: center;
   font-size: 24px;
   font-weight: bold;
   display: table-cell;
   vertical-align: middle;
+}
+
+h1, h2, h3, h4, h5, p {
+  font-family: Geneva, sans-serif;
+}
+
+p {
+  font-size: 16px;
+}
+
+.shares-entry, .limit-entry {
+  display: inline;
+  width: 135px;
+  border-radius: 0;
+}
+
+.row {
+  margin-top: 80px;
+}
+
+.stats {
+  margin-top: 50px;
+}
+
+.order-entry {
+  margin-top: 50px;
+}
+
+.popover-content {
+  font-size: 12px;
 }
