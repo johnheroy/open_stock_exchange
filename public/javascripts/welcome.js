@@ -10,4 +10,4 @@ setInterval(function(){
     console.log('latency is: ' + ((end - start) / 2) + ' ms');
     $('.latency').text(((end - start) / 2) + ' ms');
   });
-}, 5000);
+}, 1000);

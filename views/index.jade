@@ -2,9 +2,10 @@ doctype html
 html(lang='en')
   head
     title Stock Exchange
-    script(type='text/javascript' src='./javascripts/jquery-2.1.1.min.js')
-    script(type='text/javascript' src='./javascripts/welcome.js')
+    link(href='./stylesheets/welcome.css', rel='stylesheet')
+    script(src='./javascripts/jquery-2.1.1.min.js')
+    script(src='./javascripts/welcome.js')
   body
-    h1 This is the stock exchange
+    div(class='title') Stock Exchange Demo
     p Your latency is 
       span(class='latency')

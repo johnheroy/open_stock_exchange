@@ -11,7 +11,7 @@ app.get('/', function(req, res) {
 
 // latency test
 app.get('/latency-test', function(req, res) {
-  res.send('ok');
+  res.send((Math.random() * 100).toString());
 });
 
 // start the server
