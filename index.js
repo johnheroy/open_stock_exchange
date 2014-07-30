@@ -9,9 +9,13 @@ app.get('/', function(req, res) {
   res.render(__dirname + '/views/index.jade');
 });
 
+// latency test
+app.get('/latency-test', function(req, res) {
+  res.send('ok');
+});
 
 // start the server
 var port = Number(process.env.PORT || 5000);
 app.listen(port, function() {
-  console.log("Listening on " + port);
+  console.log('Listening on ' + port);
 });

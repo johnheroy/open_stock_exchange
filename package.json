@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/johnheroy/stock_exchange",
   "dependencies": {
-    "express": "^4.7.2"
+    "express": "^4.7.2",
+    "jade": "^1.5.0"
   }
 }
