@@ -7,7 +7,7 @@
   width: 150px;
   border-radius: 75px;
   color: white;
-  background-color: #0F4D92;
+  background-color: #264BC0;
   text-align: center;
   font-size: 24px;
   font-weight: bold;
@@ -16,7 +16,7 @@
   margin-left: 73px;
 }
 
-h1, h2, h3, h4, h5, p, .stats-label {
+h1, h2, h3, h4, h5, p, .stats-label, .order-line {
   font-family: Geneva, sans-serif;
 }
 
@@ -66,92 +66,107 @@ p, .stats-label, .stats-data {
   padding-left: 0px;
 }
 
+/* order buttons */
+
+.buy-button, .sell-button {
+  border-radius: 0px;
+  margin-top: -3px;
+}
+
 /* orders */
 
 .order-line {
   height: 25px;
+  padding-left: 8px;
+  padding-top: 3px;
 }
 
 .blank {
-  background-color: #E3E85A;
-}
-
-.sell-1 {
-  background-color: rgba(92,184,92,1);
-}
-
-.sell-2 {
-  background-color: rgba(92,184,92,.9);
-}
-
-.sell-3 {
-  background-color: rgba(92,184,92,.8);
-}
-
-.sell-4 {
-  background-color: rgba(92,184,92,.7);
-}
-
-.sell-5 {
-  background-color: rgba(92,184,92,.6);
-}
-
-.sell-6 {
-  background-color: rgba(92,184,92,.5);
-}
-
-.sell-7 {
-  background-color: rgba(92,184,92,.4);
-}
-
-.sell-8 {
-  background-color: rgba(92,184,92,.3);
-}
-
-.sell-9 {
-  background-color: rgba(92,184,92,.2);
-}
-
-.sell-10 {
-  background-color: rgba(92,184,92,.1);
+  background-color: #FaFca7;
 }
 
 .buy-1 {
-  background-color: rgba(217,83,79,1);
+  background-color: rgba(92,184,92,1);
+  color: white;
 }
 
 .buy-2 {
-  background-color: rgba(217,83,79,.9);
+  background-color: rgba(92,184,92,.9);
+  /* color: white; */
 }
 
 .buy-3 {
-  background-color: rgba(217,83,79,.8);
+  background-color: rgba(92,184,92,.8);
+  /* color: white; */
 }
 
 .buy-4 {
-  background-color: rgba(217,83,79,.7);
+  background-color: rgba(92,184,92,.7);
 }
 
 .buy-5 {
-  background-color: rgba(217,83,79,.6);
+  background-color: rgba(92,184,92,.6);
 }
 
 .buy-6 {
-  background-color: rgba(217,83,79,.5);
+  background-color: rgba(92,184,92,.5);
 }
 
 .buy-7 {
-  background-color: rgba(217,83,79,.4);
+  background-color: rgba(92,184,92,.4);
 }
 
 .buy-8 {
-  background-color: rgba(217,83,79,.3);
+  background-color: rgba(92,184,92,.3);
 }
 
 .buy-9 {
-  background-color: rgba(217,83,79,.2);
+  background-color: rgba(92,184,92,.2);
 }
 
 .buy-10 {
+  background-color: rgba(92,184,92,.1);
+}
+
+.sell-1 {
+  background-color: rgba(217,83,79,1);
+  color: white;
+}
+
+.sell-2 {
+  background-color: rgba(217,83,79,.9);
+  /* color: white; */
+}
+
+.sell-3 {
+  background-color: rgba(217,83,79,.8);
+  /* color: white; */
+}
+
+.sell-4 {
+  background-color: rgba(217,83,79,.7);
+}
+
+.sell-5 {
+  background-color: rgba(217,83,79,.6);
+}
+
+.sell-6 {
+  background-color: rgba(217,83,79,.5);
+}
+
+.sell-7 {
+  background-color: rgba(217,83,79,.4);
+}
+
+.sell-8 {
+  background-color: rgba(217,83,79,.3);
+}
+
+.sell-9 {
+  background-color: rgba(217,83,79,.2);
+}
+
+.sell-10 {
   background-color: rgba(217,83,79,.1);
 }
