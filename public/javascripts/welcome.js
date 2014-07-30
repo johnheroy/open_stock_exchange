@@ -11,8 +11,8 @@ $(document).ready(function(){
 
   var submitNewOrder = function(type){
     socket.emit('new order', {
-      shares: $('.shares-entry').val(),
-      limit: $('.limit-entry').val(),
+      shares: parseFloat($('.shares-entry').val()),
+      limit: parseFloat($('.limit-entry').val()),
       type: type,
       latency: currentAverageLatency
     });
