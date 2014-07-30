@@ -1,6 +1,9 @@
 var express = require('express');
-
 var app = express();
+var http = require('http').Server(app);
+var io = require('socket.io')(http);
+
+// static assets
 app.engine('jade', require('jade').__express);
 app.use(express.static(__dirname + '/public'));
 
@@ -12,6 +15,10 @@ app.get('/', function(req, res) {
 // latency test
 app.get('/latency-test', function(req, res) {
   res.send((Math.random() * 100).toString());
+});
+
+io.on('connection', function(socket){
+  console.log('a user connected');
 });
 
 // start the server

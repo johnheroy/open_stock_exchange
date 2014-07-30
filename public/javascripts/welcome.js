@@ -1,4 +1,7 @@
 $(document).ready(function(){ 
+  var socket = io();
+
+
   var last5latencies = new Array();
   // is this going to leak memory?
   setInterval(function(){
