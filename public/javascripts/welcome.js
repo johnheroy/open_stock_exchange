@@ -7,7 +7,7 @@ setInterval(function(){
   }).done(function(msg){
     console.log('got response');
     var end = new Date().getTime();
-    console.log('latency is: ' + (end - start) + ' ms');
-    $('.latency').text((end - start) + ' ms');
+    console.log('latency is: ' + ((end - start) / 2) + ' ms');
+    $('.latency').text(((end - start) / 2) + ' ms');
   });
 }, 1000);
