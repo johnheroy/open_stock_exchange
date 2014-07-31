@@ -19,9 +19,16 @@ $(document).ready(function(){
   };
 
   socket.on('new order book', function(book){
-    console.log(book);
+    // console.log(book);
     var buyOrders = book.buys;
     var sellOrders = book.sells;
+
+    if (buyOrders[0] && sellOrders[0]){
+      $('.current-bid-ask').text(buyOrders[0].limit + ' - ' + sellOrders[0].limit);  
+    } else {
+      $('.current-bid-ask').text('N/A');
+    }
+    
 
     var maxLengthBuys;
     if (buyOrders.length < 10){
@@ -59,7 +66,7 @@ $(document).ready(function(){
   });
 
   socket.on('new order executed', function(order){
-    $('.blank').text(order.shares + ' shares cleared at ' + order.price);
+    $('.blank').text('* ' + order.shares + ' shares cleared at ' + order.price + ' *');
   });
 
   var last5latencies = new Array();

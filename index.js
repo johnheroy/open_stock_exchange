@@ -25,10 +25,7 @@ var lastTrade; // update to last trade
 // sockets
 io.on('connection', function(socket){
   console.log('a user connected');
-  io.emit('new order book', {
-    buys: buyOrders,
-    sells: sellOrders
-  });
+  broadcastBook();
   socket.on('disconnect', function(){
     console.log('user disconnected');
   });
@@ -41,14 +38,18 @@ io.on('connection', function(socket){
     // delay adding order inversely by the latency
     setTimeout(function(){
       addOrder(order, timeReceived);
-      io.emit('new order book', {
-        buys: buyOrders,
-        sells: sellOrders
-      });
+      broadcastBook();
       matchOrders();
     }, (500 - order.latency));    
   });
 });
+
+var broadcastBook = function(){
+  io.emit('new order book', {
+    buys: buyOrders.slice(0, 10),
+    sells: sellOrders.slice(0, 10)
+  });
+}
 
 var matchOrders = function(){
   // start matching orders in priority
@@ -78,10 +79,7 @@ var matchOrders = function(){
       shares: shares,
       price: clearingPrice
     });
-    io.emit('new order book', {
-      buys: buyOrders,
-      sells: sellOrders
-    });
+    broadcastBook();
     matchOrders();
   } else {
     console.log('no orders to match');
