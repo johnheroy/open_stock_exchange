@@ -62,7 +62,11 @@ $(document).ready(function(){
   });
 
   socket.on('last trade', function(lastTrade){
-    $('.last-trade').text(lastTrade);
+    if (!lastTrade){
+      $('.last-trade').text('N/A');
+    } else {
+      $('.last-trade').text(lastTrade);
+    }
   });
 
   socket.on('new order executed', function(order){
