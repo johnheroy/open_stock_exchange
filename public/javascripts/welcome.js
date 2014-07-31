@@ -71,7 +71,7 @@ $(document).ready(function(){
 
   var last5latencies = new Array();
   var currentAverageLatency;
-  // is this going to leak memory?
+  // change to socket.io latency
   setInterval(function(){
     var start = new Date().getTime();
     $.ajax({

@@ -26,6 +26,7 @@ var lastTrade; // update to last trade
 io.on('connection', function(socket){
   console.log('a user connected');
   broadcastBook();
+  io.emit('last trade', lastTrade);
   socket.on('disconnect', function(){
     console.log('user disconnected');
   });
