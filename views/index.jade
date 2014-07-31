@@ -25,7 +25,10 @@ html(lang='en')
               | is:
             span(class='latency stats-data')
           div(class='order-entry')
-            h3 Place your order (limit only)
+            h3 
+              | Place your order (
+              a(href='#', class='limit-popover', rel='popover') limit 
+              | only)
             input(class='form-control shares-entry', placeholder='# shares')
             input(class='form-control limit-entry',  placeholder='limit price')
             button(class='btn btn-success buy-button')  Buy
@@ -52,4 +55,5 @@ html(lang='en')
           div(class='order-line buy-8')
           div(class='order-line buy-9')
           div(class='order-line buy-10')
+          a(href='#', class='order-book-popover', rel='popover') What's this?
         div(class='col-xs-1')

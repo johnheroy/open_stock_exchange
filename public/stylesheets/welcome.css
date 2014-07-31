@@ -81,6 +81,10 @@ p, .stats-label, .stats-data {
   padding-top: 3px;
 }
 
+.order-book-popover {
+  float: right;
+}
+
 .blank {
   background-color: #FaFca7;
 }

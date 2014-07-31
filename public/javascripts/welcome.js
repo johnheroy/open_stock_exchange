@@ -99,9 +99,21 @@ $(document).ready(function(){
   }, 1000);
 
   $('.latency-popover').popover({
-    title: 'What\'s this?',
-    content: 'In order to ensure that no single investor has an unfair advantage, we adjust your order submission based on your current one-way latency (calculated as average of last 5 measurements)',
+    title: 'What\'s latency all about?',
+    content: 'In order to ensure that no single investor has an unfair advantage, we adjust your order submission based on your current one-way latency in milliseconds (average of last 5 measurements), which is the time it takes to send data from your computer to our server',
     placement: 'bottom'
+  });
+
+  $('.limit-popover').popover({
+    title: 'What\'s a limit order?',
+    content: 'A limit order is an order to buy/sell a set number of shares at a specified price or better. So if you want to buy 500 shares at a limit of 1.50, then you would accept any price less than or equal to 1.50, e.g. 1.49',
+    placement: 'top'
+  });
+
+  $('.order-book-popover').popover({
+    title: 'What\'s this?',
+    content: 'This is a "limit order book", which represents all of the entered but unexecuted orders. The buy orders are in green and sell orders in red, from bottom to top in ascending price order. The last order executed is displayed in the middle yellow box. The current bid/ask spread is calculated based on the current disparity between the lowest sell order and highest buy order',
+    placement: 'top'
   });
 });
 
