@@ -29,9 +29,13 @@ $(document).ready(function(){
     } else {
       maxLengthBuys = 10;
     }
-    for (var i = 1; i <= maxLengthBuys; i++){
-      var orderText = buyOrders[i-1].shares + ' shares @ limit ' + buyOrders[i-1].limit;
-      $('.buy-' + i).text(orderText);
+    for (var i = 1; i <= 10; i++){
+      if (i <= maxLengthBuys){
+        var orderText = buyOrders[i-1].shares + ' shares @ limit ' + buyOrders[i-1].limit;
+        $('.buy-' + i).text(orderText);
+      } else {
+        $('.buy-' + i).text('');
+      }
     }
 
     var maxLengthSells;
@@ -40,10 +44,22 @@ $(document).ready(function(){
     } else {
       maxLengthSells = 10;
     }
-    for (var i = 1; i <= maxLengthSells; i++){
-      var orderText = sellOrders[i-1].shares + ' shares @ limit ' + sellOrders[i-1].limit;
-      $('.sell-' + i).text(orderText);
+    for (var i = 1; i <= 10; i++){
+      if (i <= maxLengthSells){
+        var orderText = sellOrders[i-1].shares + ' shares @ limit ' + sellOrders[i-1].limit;
+        $('.sell-' + i).text(orderText);
+      } else {
+        $('.sell-' + i).text('');
+      }
     }    
+  });
+
+  socket.on('last trade', function(lastTrade){
+    $('.last-trade').text(lastTrade);
+  });
+
+  socket.on('new order executed', function(order){
+    $('.blank').text(order.shares + ' shares cleared at ' + order.price);
   });
 
   var last5latencies = new Array();

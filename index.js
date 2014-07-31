@@ -45,13 +45,47 @@ io.on('connection', function(socket){
         buys: buyOrders,
         sells: sellOrders
       });
-      // matchOrders();
+      matchOrders();
     }, (500 - order.latency));    
   });
 });
 
 var matchOrders = function(){
   // start matching orders in priority
+  if (buyOrders.length === 0 || sellOrders.length === 0){
+    return;
+  }
+  if (buyOrders[0].limit >= sellOrders[0].limit){
+    var clearingPrice = (buyOrders[0].limit + sellOrders[0].limit) / 2;
+    var shares;
+    lastTrade = clearingPrice;
+    io.emit('last trade', lastTrade);
+    if (buyOrders[0].shares < sellOrders[0].shares){
+      shares = buyOrders[0].shares;
+      sellOrders[0].shares -= shares;
+      buyOrders.shift();
+    } else if (buyOrders[0].shares === sellOrders[0].shares){
+      shares = buyOrders[0].shares;
+      buyOrders.shift();
+      sellOrders.shift();
+    } else {
+      shares = sellOrders[0].shares;
+      buyOrders[0].shares -= shares;
+      sellOrders.shift();
+    }
+    console.log('matched new order, ' + shares + ' shares at ' + clearingPrice + ' price');
+    io.emit('new order executed', {
+      shares: shares,
+      price: clearingPrice
+    });
+    io.emit('new order book', {
+      buys: buyOrders,
+      sells: sellOrders
+    });
+    matchOrders();
+  } else {
+    console.log('no orders to match');
+  }
 };
 
 var addOrder = function(order, timeReceived){
